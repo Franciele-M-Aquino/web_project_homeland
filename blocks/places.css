@@ -1,0 +1,187 @@
+.places {
+  font-family: "Inter", "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.places-container {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.places__item {
+  max-width: 984px;
+  display: grid;
+  grid-gap: 48px 40px;
+  grid-template-areas:
+    "title artist"
+    "image text"
+    "buttom text"
+    ". text";
+}
+
+.places-container__title {
+  grid-area: title;
+  line-height: 1.05;
+  font-weight: 900;
+  font-size: 72px;
+  color: #ffffff;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.places-container__subtitle {
+  grid-area: artist;
+  width: 456px;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.places-container__subtitle-artist {
+  width: 85.17px;
+  line-height: 1.21;
+  font-weight: 400;
+  font-size: 12px;
+  color: #aaaaaa;
+  letter-spacing: 1.44px;
+  margin-bottom: 8px;
+}
+
+.places-container__subtitle-authors {
+  margin: 0;
+  line-height: 1.22;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.places-container__cities-image {
+  grid-area: image;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+}
+
+.places-container__cities-image:hover {
+  opacity: 0.5;
+}
+
+.places-container__content-container {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.places-container__content {
+  font-size: 18px;
+  line-height: 1.63;
+  margin: 0;
+}
+
+.places-button {
+  grid-area: buttom;
+  width: 356.08px;
+  height: 48px;
+  padding: 13px 20px;
+  border: none;
+  background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.21;
+  text-align: center;
+}
+
+.places-buttom:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 120, 254, 0.25) 0%,
+    rgba(0, 58, 123, 0.25) 99.98%
+  );
+}
+
+@media screen and (max-width: 1024px) {
+  .places-container {
+    row-gap: 47px;
+  }
+
+  .places__item {
+    max-width: 720px;
+    row-gap: 72px;
+  }
+
+  .places-container__title {
+    line-height: 1.09;
+    font-size: 42px;
+  }
+
+  .places-container__cities-image {
+    width: 100%;
+  }
+
+  .places-container__content {
+    font-size: 16px;
+  }
+
+  .places-button {
+    width: 355px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .places {
+    padding-top: 62px;
+  }
+
+  .places-container {
+    row-gap: 50px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .places__item {
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "artist"
+      "image"
+      "text"
+      "button";
+  }
+
+  .places-container__title {
+    line-height: 1.09;
+    font-size: 32px;
+    padding: 0 16px;
+  }
+
+  .places-container__subtitle-artist {
+    padding: 0 16px;
+    margin: 0;
+  }
+
+  .places-container__subtitle-authors {
+    margin-top: 0;
+  }
+
+  .places-container__content {
+    margin: 0 16px;
+  }
+
+  .places-button {
+    width: 288px;
+    margin-left: 16px;
+    font-size: 14px;
+  }
+}
