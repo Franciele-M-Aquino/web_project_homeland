@@ -15,5 +15,5 @@ Bem-vindo ao **Triple Homeland**, o site que permite a conexão entre a equipe T
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/Franciele-M-Aquino/web_project_homeland.git
+   git clone https://github.com/Franciele-M-Aquino/web_project_homeland
    ```

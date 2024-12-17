@@ -1,4 +1,4 @@
-/*.body {
-  margin: 0;
-  background-color: rgba(42, 44, 47, 1);
-}*/
+body {
+  background-color: #2a2c2f;
+  overflow-x: hidden;
+}

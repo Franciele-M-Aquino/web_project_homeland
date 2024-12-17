@@ -21,7 +21,7 @@
   grid-template-areas:
     "title artist"
     "image text"
-    "buttom text"
+    "button text"
     ". text";
 }
 
@@ -31,6 +31,7 @@
   font-weight: 900;
   font-size: 72px;
   color: #ffffff;
+  max-width: 460px;
   width: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -38,7 +39,8 @@
 
 .places-container__subtitle {
   grid-area: artist;
-  width: 456px;
+  max-width: 456px;
+  width: 100%;
   box-sizing: border-box;
   margin-top: auto;
 }
@@ -51,6 +53,7 @@
   color: #aaaaaa;
   letter-spacing: 1.44px;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .places-container__subtitle-authors {
@@ -63,7 +66,8 @@
 .places-container__cities-image {
   grid-area: image;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
-  max-width: 100%;
+  max-width: 460px;
+  width: 100%;
 }
 
 .places-container__cities-image:hover {
@@ -76,7 +80,7 @@
   flex-direction: column;
   justify-content: flex-start;
   row-gap: 25px;
-  width: 100%;
+  max-width: 484px;
   box-sizing: border-box;
 }
 
@@ -87,7 +91,7 @@
 }
 
 .places-button {
-  grid-area: buttom;
+  grid-area: button;
   width: 356.08px;
   height: 48px;
   padding: 13px 20px;
@@ -102,7 +106,7 @@
   text-align: center;
 }
 
-.places-buttom:hover {
+.places-button:hover {
   background: linear-gradient(
     90deg,
     rgba(2, 120, 254, 0.25) 0%,
@@ -112,46 +116,62 @@
 
 @media screen and (max-width: 1024px) {
   .places-container {
-    row-gap: 47px;
+    max-width: 720px;
+    width: 100%;
   }
 
   .places__item {
     max-width: 720px;
-    row-gap: 72px;
+    grid-gap: 20px;
+  }
+
+  .places-container__title {
+    max-width: 340px;
+    width: 100%;
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .places-container__content-container {
+    max-width: 352px;
+    width: 100%;
   }
 
   .places-container__title {
     line-height: 1.09;
     font-size: 42px;
+    max-width: 340px;
+    width: 100%;
   }
 
   .places-container__cities-image {
+    max-width: 340px;
     width: 100%;
   }
 
   .places-container__content {
     font-size: 16px;
+    max-width: 352px;
+    width: 100%;
   }
 
   .places-button {
-    width: 355px;
+    max-width: 355px;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 720px) {
   .places {
     padding-top: 62px;
-  }
-
-  .places-container {
-    row-gap: 50px;
-    max-width: 100%;
-    margin: 0;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .places__item {
-    row-gap: 30px;
-    grid-template-columns: 1fr;
+    max-width: 320px;
+    width: 100%;
+    row-gap: 50px;
+    grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
       "title"
       "artist"
@@ -161,27 +181,41 @@
   }
 
   .places-container__title {
+    max-width: 288px;
+    width: 100%;
     line-height: 1.09;
     font-size: 32px;
     padding: 0 16px;
   }
 
   .places-container__subtitle-artist {
+    max-width: 288px;
+    width: 100%;
     padding: 0 16px;
     margin: 0;
   }
 
   .places-container__subtitle-authors {
     margin-top: 0;
+    max-width: 288px;
+    width: 100%;
+  }
+
+  .places-container__cities-image {
+    max-width: 320px;
+    width: 100%;
   }
 
   .places-container__content {
     margin: 0 16px;
+    max-width: 288px;
+    width: 100%;
   }
 
   .places-button {
-    width: 288px;
-    margin-left: 16px;
+    max-width: 288px;
+    width: 100%;
+    margin: 0 auto;
     font-size: 14px;
   }
 }

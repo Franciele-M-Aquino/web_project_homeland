@@ -1,5 +1,7 @@
 .photo-grid {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .photo-grid__container {
@@ -12,9 +14,15 @@
   display: grid;
 }
 
-.photo-grid__item {
+/*.photo-grid__item {
   width: 284px;
   height: 213px;
+}*/
+
+.photo-grid__item {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1024px) {
@@ -32,7 +40,7 @@
   }
 }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 720px) {
   .photo-grid__container {
     max-width: 288px;
     height: 1812px;
