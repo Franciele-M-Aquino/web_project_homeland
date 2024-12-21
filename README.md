@@ -17,3 +17,6 @@ Bem-vindo ao **Triple Homeland**, o site que permite a conexão entre a equipe T
    ```bash
    git clone https://github.com/Franciele-M-Aquino/web_project_homeland
    ```
+2. Link do projeto GH pages:
+
+https://franciele-m-aquino.github.io/web_project_homeland/
